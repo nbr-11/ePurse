@@ -9,18 +9,21 @@
     "dist"
   ],
   "exports": {
-    "./styles.css":"./dist/index.css",
+    "./signup-form": "./src/signup-form.tsx",
+    "./footer": "./src/footer.tsx",
+    "./hero-section": "./src/hero-section.tsx",
+    "./appbar": "./src/appbar.tsx",
+    "./styles.css": "./dist/index.css",
     "./button": "./src/button.tsx",
     "./card": "./src/card.tsx",
     "./code": "./src/code.tsx"
-
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component",
-    "build":"tailwindcss -i ./src/styles.css -o ./dist/index.css",
-    "dev":"tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
-    "type-check":"tsc --noEmit"
+    "build": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
+    "dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
+    "type-check": "tsc --noEmit"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
@@ -38,6 +41,8 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "react": "^18.2.0"
+    "next-auth": "^4.24.7",
+    "react": "^18.2.0",
+    "react-hook-form": "^7.52.2"
   }
 }
