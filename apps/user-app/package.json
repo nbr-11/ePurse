@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@repo/context":"workspace:*",
     "@repo/db": "workspace:*",
     "@repo/ui": "workspace:*",
     "next": "15.0.0-rc.0",
@@ -21,7 +22,7 @@
     "@repo/tailwind-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/node": "^20",
-    "@types/react": "^18",
+    "@types/react": "^18.0.0",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.19",
     "eslint": "^8",
