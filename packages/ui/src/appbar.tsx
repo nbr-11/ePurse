@@ -25,6 +25,7 @@ export const Appbar = ({session}:{session:SessionContextValue}) => {
           }} className="text-white bg-slate-900 p-2 rounded-lg text-xl font-bold px-4">login</button>
             
           )
+          
         }
 
        
