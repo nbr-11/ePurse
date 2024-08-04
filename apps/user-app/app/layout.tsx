@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import "@repo/ui/styles.css";
-import { Appbar } from "@repo/ui/appbar";
 import { Footer } from "@repo/ui/footer";
-import {Providers} from "@repo/context/provider";
-import React,{ReactNode} from "react";
+import React from "react";
+import UserAppBar from "../components/userAppBar";
+import { Provider } from "./lib/providers";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,23 +23,22 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  session
+
 }: Readonly<{
   children: React.ReactNode,
-  session:any
 }>) {
   return (
-    
-        <html lang="en">
+
+    <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} w-screen h-screen overflow-auto overflow-x-hidden relative `}>
-      <Providers session={session}>
-             <Appbar/>
-            {children}
-            <Footer/>
-      </Providers>
+        <Provider>
+          <UserAppBar/>
+          {children}
+          <Footer />
+        </Provider>
       </body>
     </html>
-    
-    
+
+
   );
 }
